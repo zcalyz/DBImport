@@ -23,11 +23,11 @@ public class UploadAction {
 		if(file == null || file.getSize() == 0){
 			return "fail";
 		}
-		saveSqlFile(file);
+		uploadFile(file);
 		return "success";
 	}
 
-	public void saveSqlFile(MultipartFile file) {
+	public void uploadFile(MultipartFile file) {
 		if (!file.isEmpty()) {
 			byte[] bytes = null;
 			FileOutputStream out = null;
