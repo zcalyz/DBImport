@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="student" type="com.zc.ibatis.Student"/>
+	
+	<select id="selectStudentByName" parameterClass="String" resultClass="student">
+		select * from student where sname = #name#
+	</select>
+</sqlMap>
